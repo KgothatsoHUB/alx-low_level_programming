@@ -9,7 +9,7 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 	
-	 (p + 5) = 98;
+	 *(p + 5) = 98;
 	 /* Reminder:
 	 * you are not allowed to use
 	 * you are not allowed to modify p
