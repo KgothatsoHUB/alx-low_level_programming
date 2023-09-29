@@ -1,14 +1,12 @@
 #include "main.h"
-
 /**
- * set_bit - Sets a bit at a given index to 1.
+ * clear_bit - Sets the value of a given bit to 0.
  * @n: Pointer to the numb to change.
- * @index: Index of the bit to set to 1.
+ * @index: Index of the bit to clear.
  * Return: 1 for success, -1 for failure.
- *
  **/
 
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 
 {
 
@@ -16,9 +14,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 		return (-1);
 
-	*n = ((1UL << index) & *n);
+	*n = (~(1UL << index) & *n);
 
 	return (1);
 
 }
-
