@@ -14,18 +14,18 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	ht = malloc(sizeof(hash_table_t));
 	if (ht == NULL)
-		return NULL;
+		return (NULL);
 
 	ht->size = size;
 	ht->array = malloc(sizeof(hash_node_t *) * size);
 	if (ht->array == NULL)
 	{
-		free(ht);  // Free the allocated memory for the hash table structure
-		return NULL;
+		free(ht);  /** Free the allocated memory for the hash table structure**/
+		return (NULL);
 	}
 
 	for (i = 0; i < size; i++)
 		ht->array[i] = NULL;
 
-	return ht;
+	return (ht);
 }
